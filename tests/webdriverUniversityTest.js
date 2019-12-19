@@ -6,9 +6,9 @@ describe("Verify whether webdriveruniversity links on homepage work correctly", 
 		})
 		browser.url('/')
 		var title = browser.getTitle();
-		//assert.equal(title, 'WebDriverUniversity.com');
 		expect(title).to.equal('WebDriverUniversity.com');
 		console.log('Title is: ' + title);
+		browser.debug();
 		browser.click("#contact-us");
 		browser.pause(1000);
 	});
@@ -17,7 +17,6 @@ describe("Verify whether webdriveruniversity links on homepage work correctly", 
 		browser.url('/')
 		browser.click('#login-portal');
 		var title = browser.getTitle();
-		//assert.equal(title, 'WebDriverUniversity.com');
 		title.should.equal('WebDriverUniversity.com');
 		console.log('Title is: ' + title);
 		browser.pause(1000);
