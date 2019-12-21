@@ -8,6 +8,7 @@ if(process.env.SERVER === 'prod') {
 
     var timeout = process.env.DEBUG ? 9999999 : 10000;
 
+
 exports.config = {
     specs: [
         'tests/*.js'
