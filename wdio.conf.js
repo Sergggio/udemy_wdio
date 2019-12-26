@@ -49,7 +49,7 @@ exports.config = {
 
     before: function (capabilities, specs) {
     	require('@babel/register');
-        //expect = require('chai').expect;
+        expect = require('chai').expect;
         //should = require('chai').should();
     },
  }
