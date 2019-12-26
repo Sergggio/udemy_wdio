@@ -24,9 +24,8 @@
     "loglevel-plugin-prefix": "^0.8.4",
     "mocha": "^6.2.2",
     "selenium-standalone": "^6.17.0",
+    "wdio-chromedriver-service": "^5.0.2",
     "webdriverio": "^5.18.0"
   },
-  "dependencies": {
-    "wdio-chromedriver-service": "^5.0.2"
-  }
+  "dependencies": {}
 }

@@ -11,6 +11,7 @@
 
 exports.config = {
     runner: 'local',
+    path: '/',
     specs: [
         'test/*.js'
     ],
@@ -36,8 +37,8 @@ exports.config = {
     waitforTimeout: 10000,
     connectionRetryTimeout: 90000,
     connectionRetryCount: 3,
-    services: ['selenium-standalone'],
-    //services: ['chromedriver'],
+    //services: ['selenium-standalone'],
+    services: ['chromedriver'],
     framework: 'mocha',
     reporters: ['spec'],
     mochaOpts: {
