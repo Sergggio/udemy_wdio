@@ -47,6 +47,7 @@ exports.config = {
         compilers: ['js:@babel/register']
     },
 
+
     before: function (capabilities, specs) {
     	require('@babel/register');
         expect = require('chai').expect;
