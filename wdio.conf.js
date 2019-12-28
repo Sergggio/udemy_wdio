@@ -78,6 +78,5 @@ exports.config = {
                 throw new Error("Could not send keys: " + $(keys) + ", using selector: " + $(selector));
             }
         });
-         
     },
  }
