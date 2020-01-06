@@ -1,4 +1,5 @@
 var config = require('../config/main-config')
+var dataGenerators = require('../utils/dataGenerators')
 
 describe("Test contact us page on webdriveruni", () => {
     beforeEach(function() {
@@ -14,7 +15,6 @@ describe("Test contact us page on webdriveruni", () => {
         //const contactUsButton = $('//h1[text()="CONTACT US"]/..');
         //contactUsButton.click();
         browser.waitAndClick('//h1[text()="CONTACT US"]/..');
-
         browser.switchWindow('WebDriver | Contact Us');
 
 
@@ -31,8 +31,8 @@ describe("Test contact us page on webdriveruni", () => {
 
         browser.waitAndSendkeys('//*[@name="first_name"]', config.firstName);
         browser.waitAndSendkeys('//*[@name="last_name"]', config.lastName);
-        browser.waitAndSendkeys('//*[@name="email"]', 'joe_Blogs121@mail.com');
-        browser.waitAndSendkeys('//*[@name="message"]', 'Hello how are you?');
+        browser.waitAndSendkeys('//*[@name="email"]', dataGenerators.generateRandomEmailAddress());
+        browser.waitAndSendkeys('//*[@name="message"]', dataGenerators.generateRandomString());
 
         browser.waitAndClick('//*[@value="SUBMIT"]');
         //submitButton.click();
