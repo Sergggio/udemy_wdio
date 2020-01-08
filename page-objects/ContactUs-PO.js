@@ -1,4 +1,6 @@
 import Base_PO from './Base_PO'
+var config = require('../config/main-config')
+var dataGenerators = require('../utils/dataGenerators')
 
 class ContactUs_PO extends Base_PO {
     open() {
@@ -31,6 +33,16 @@ class ContactUs_PO extends Base_PO {
 
     get successfulContactHeader() {
         return $("//div[@id='contact_reply']/h1");
+    }
+
+    successfulContactUsSubmission() {
+        this.firstName.waitForDisplayed(5000);
+        this.firstName.setValue(config.firstName);
+        this.lastName.setValue(config.lastName);
+        this.emailAddress.setValue(dataGenerators.generateRandomEmailAddress());
+        this.comments.setValue(dataGenerators.generateRandomString());
+        this.submit();
+        expect(this.successfulContactHeader.getText()).to.contain('Thank You for your Message!');
     }
 
 }
