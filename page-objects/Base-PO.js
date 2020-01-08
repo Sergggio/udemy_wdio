@@ -1,4 +1,3 @@
-//https://webdriver.io/docs/pageobjects.html
 export default class Base_PO {
     open(path) {
         browser.url(path);
